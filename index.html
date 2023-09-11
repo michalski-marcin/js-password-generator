@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate a random password</h1>
+    <h2>Fortify Your Digital World</h2>
+    <form>
+        <input type="checkbox" id="numbers" name="numbers" value="number">
+        <label for="numbers"> Numbers</label><br>
+        <input type="checkbox" id="special-sign" name="special-sign" value="sign">
+        <label for="special-sign"> Special signs</label><br>
+        <label for="lenght">Quantity:</label>
+        <input type="number" id="lenght" name="lenght" min="5" max="25" step="1" value="5">
+        <input type="button" onclick="generate()" value="Generate!">
+      </form>
+      <p id="password-el"></p>
+    <script src="script.js"></script>
+</body>
+</html>

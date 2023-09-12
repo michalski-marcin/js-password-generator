@@ -12,6 +12,7 @@ const passwordEl = document.getElementById("password-el")
 const numbersInput = document.getElementById('numbers')
 const specialInput = document.getElementById('special-sign')
 const lenghtEl = document.getElementById("lenght")
+const passwordContainer = document.querySelector(".password-container")
 
 
 // MAIN FUNCTION
@@ -22,6 +23,7 @@ function generate() {
     getCharactersArray()
     getPassword()
     passwordEl.textContent = password
+    passwordContainer.classList.add("visible")
 }
 
 // FUNCTIONS

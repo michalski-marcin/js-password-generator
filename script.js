@@ -1,6 +1,6 @@
 let password = ""
 let passwordIndex = 0
-const lenghtEl = 12
+let lenghtEl = 0
 
 
 // CHARACTER ARRAYS
@@ -14,6 +14,9 @@ let characters = []
 const passwordEl = document.getElementById("password-el")
 const numbersInput = document.getElementById('numbers')
 const specialInput = document.getElementById('special-sign')
+const eightInput = document.getElementById('eight-chars')
+const twelveInput = document.getElementById('twelve-chars')
+
 const passwordContainer = document.querySelector(".password-container")
 
 
@@ -24,6 +27,7 @@ function generate() {
     characters = letters
     passwordEl.textContent = ""
     getCharactersArray()
+    getLenghtArray()
     getPassword()
     passwordEl.textContent = password
     passwordContainer.classList.add("visible")
@@ -36,6 +40,14 @@ function getCharactersArray() {
     }
     if (specialInput.checked == true) {
         characters = characters.concat(specialSigns)
+    }
+}
+
+function getLenghtArray() {
+    if (eightInput.checked == true) {
+        lenghtEl = 8
+    } else {
+        lenghtEl = 12
     }
 }
 

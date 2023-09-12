@@ -62,6 +62,17 @@ h2 {
   margin-bottom: 40px;
 }
 
+.settings {
+    display: flex;
+}
+
+.left-settings {
+    width: 50%;
+}
+.right-settings {
+    
+}
+
 .checkbox-container {
   display: block;
   position: relative;
@@ -69,7 +80,9 @@ h2 {
 }
 
 #numbers,
-#special-sign {
+#special-sign,
+#eight-chars,
+#twelve-chars {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -157,4 +170,34 @@ h2 {
 
 .visible {
   opacity: 1;
+}
+
+
+@media screen and (max-width: 430px) {
+.box {
+    width: 95%;
+    padding: 140px 20px 80px;
+    top: calc(0.5 * 100vh);
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+.password-container {
+    width: 90%;
+}
+
+.fa-copy {
+    display: inline-block;
+    right: 52px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 17px;
+}
+
 }

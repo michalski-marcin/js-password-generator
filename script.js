@@ -1,4 +1,7 @@
 let password = ""
+let passwordIndex = 0
+const lenghtEl = 12
+
 
 // CHARACTER ARRAYS
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -11,7 +14,6 @@ let characters = []
 const passwordEl = document.getElementById("password-el")
 const numbersInput = document.getElementById('numbers')
 const specialInput = document.getElementById('special-sign')
-const lenghtEl = document.getElementById("lenght")
 const passwordContainer = document.querySelector(".password-container")
 
 
@@ -20,6 +22,7 @@ const passwordContainer = document.querySelector(".password-container")
 function generate() {
     password = ""
     characters = letters
+    passwordEl.textContent = ""
     getCharactersArray()
     getPassword()
     passwordEl.textContent = password
@@ -37,8 +40,13 @@ function getCharactersArray() {
 }
 
 function getPassword() {
-    for (i = 0; i < lenghtEl.value; i++) {
+    for (i = 0; i < lenghtEl; i++) {
         let randomCharacter = characters[Math.floor(characters.length * Math.random())];
         password += randomCharacter
-      }
     }
+}
+
+function copyToClipboard() {
+    navigator.clipboard.writeText(password)
+    alert("Password copied to clipboard!")
+} 

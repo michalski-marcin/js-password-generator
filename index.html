@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="box">
-    <h1>Generate a <br><span>random password</span></h1>
-    <h2>Fortify Your Digital World</h2>
-    <form>
-        <input type="checkbox" id="numbers" name="numbers" value="number">
-        <label for="numbers"> Numbers</label><br>
-        <input type="checkbox" id="special-sign" name="special-sign" value="sign">
-        <label for="special-sign"> Special signs</label><br>
-        <label for="lenght">Quantity:</label>
-        <input type="number" id="lenght" name="lenght" min="5" max="25" step="1" value="5">
-        <input type="button" id="button" onclick="generate()" value="Generate password">
-      </form>
-      <div class="password-container">
-      <p id="password-el"></p>
+        <div class="top-bar">
+        <img src="topbar.svg" alt="">
     </div>
+        <h1>Generate a<br><span>random password</span></h1>
+        <h2>Fortify Your Digital World</h2>
+        <form>
+
+            <label for="numbers" class="checkbox-container"> Numbers
+                <input type="checkbox" id="numbers" name="numbers" value="number">
+                <span class="checkmark"></span>
+            </label><br>
+            <label for="special-sign" class="checkbox-container"> Special signs
+                <input type="checkbox" id="special-sign" name="special-sign" value="sign">
+                <span class="checkmark"></span>
+            </label>
+            <input type="button" id="button" onclick="generate()" value="Generate password">
+        </form>
+        <div class="password-container">
+            <span id="password-el"></span><i class="fa-regular fa-copy" onclick="copyToClipboard()"></i>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a4a116f2be.js" crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>

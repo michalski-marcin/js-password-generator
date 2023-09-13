@@ -17,12 +17,14 @@ const specialInput = document.getElementById('special-sign')
 const eightInput = document.getElementById('eight-chars')
 const twelveInput = document.getElementById('twelve-chars')
 
+const copyAlert = document.querySelector('.copy')
 const passwordContainer = document.querySelector(".password-container")
 
 
 // MAIN FUNCTION
 
 function generate() {
+    copyAlert.classList.remove("visible")
     password = ""
     characters = letters
     passwordEl.textContent = ""
@@ -59,6 +61,7 @@ function getPassword() {
 }
 
 function copyToClipboard() {
+    copyAlert.classList.add("visible")
     navigator.clipboard.writeText(password)
-    alert("Password copied to clipboard!")
+
 } 

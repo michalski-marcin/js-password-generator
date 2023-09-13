@@ -11,37 +11,40 @@
 <body>
     <div class="box">
         <div class="top-bar">
-        <img src="topbar.svg" alt="">
-    </div>
+            <img src="topbar.svg" alt="">
+        </div>
         <h1>Generate a<br><span>random password</span></h1>
         <h2>Fortify Your Digital World</h2>
         <form>
             <div class="settings">
                 <div class="left-settings">
-            <label for="numbers" class="checkbox-container"> Numbers
-                <input type="checkbox" id="numbers" name="numbers" value="number">
-                <span class="checkmark"></span>
-            </label><br>
-            <label for="special-sign" class="checkbox-container radio"> Special signs
-                <input type="checkbox" id="special-sign" name="special-sign" value="sign">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <div class="right-settings">
-            <label for="eight-chars" class="checkbox-container radio"> 8 characters
-                <input type="radio" id="eight-chars" name="chars" value="number" checked="checked">
-                <span class="checkmark"></span>
-            </label><br>
-            <label for="twelve-chars" class="checkbox-container"> 12 characters
-                <input type="radio" id="twelve-chars" name="chars" value="sign">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        </div>
+                    <label for="numbers" class="checkbox-container"> Numbers
+                        <input type="checkbox" id="numbers" name="numbers" value="number">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label for="special-sign" class="checkbox-container radio"> Special signs
+                        <input type="checkbox" id="special-sign" name="special-sign" value="sign">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="right-settings">
+                    <label for="eight-chars" class="checkbox-container radio"> 8 characters
+                        <input type="radio" id="eight-chars" name="chars" value="number" checked="checked">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label for="twelve-chars" class="checkbox-container"> 12 characters
+                        <input type="radio" id="twelve-chars" name="chars" value="sign">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
             <input type="button" id="button" onclick="generate()" value="Generate password">
         </form>
         <div class="password-container">
             <span id="password-el"></span><i class="fa-regular fa-copy" onclick="copyToClipboard()"></i>
+        </div>
+        <div class="copy">
+            Password copied to Clipboard!
         </div>
     </div>
     <script src="script.js"></script>
